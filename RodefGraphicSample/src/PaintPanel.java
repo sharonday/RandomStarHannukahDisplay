@@ -21,15 +21,17 @@ public class PaintPanel extends JPanel {
 		g.fillRect(0, 0, 600, 500);
 		Graphics2D g2 = (Graphics2D) g;
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+		
+		Color c = Color.black;
+		
 		for (int i = 1; i <= num; i++) {
 
 			// Random color
-			int r = randy.nextInt(256);
-			int v = randy.nextInt(256);
+			int r = randy.nextInt(50);
+			int v = randy.nextInt(50);
 			int b = randy.nextInt(256);
-			// int a = randy.nextInt(100);
-			Color c = new Color(r, v, b);
+			int a = randy.nextInt(200);
+			c = new Color(r, v, b, a);
 			g2.setColor(c);
 
 			// draw triangle
@@ -53,6 +55,15 @@ public class PaintPanel extends JPanel {
 			g2.fillPolygon(xPoints, yPoints2, 3);
 
 		}
+		g.setColor(new Color(255, 255, 255));
+		g.fillRect(60, 175, 400, 110);
+		g.setColor(new Color(0, 0, 50));
+		g.drawRect(60, 175, 400, 110);
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 50));
+		g2.drawString("Happy Hanukkah!", 75, 225);
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 25));
+		g2.drawString("<3 Tech in Israel elective", 125, 275);
+
 
 	}
 }

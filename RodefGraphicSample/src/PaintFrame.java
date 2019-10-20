@@ -21,11 +21,13 @@ public class PaintFrame extends JFrame {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				
 				paintPanel.repaint();
 			}
 		});
 		content.add(drawButton, BorderLayout.WEST);
 		content.add(paintPanel, BorderLayout.CENTER);
 	}
+	
 
 }
