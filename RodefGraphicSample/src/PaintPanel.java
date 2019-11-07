@@ -27,8 +27,8 @@ public class PaintPanel extends JPanel {
 		for (int i = 1; i <= num; i++) {
 
 			// Random color
-			int r = randy.nextInt(50);
-			int v = randy.nextInt(50);
+			int r = randy.nextInt(256);
+			int v = randy.nextInt(256);
 			int b = randy.nextInt(256);
 			int a = randy.nextInt(200);
 			c = new Color(r, v, b, a);
